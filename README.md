@@ -10,7 +10,7 @@ The two counterexample-style traces below are easiest to read state-by-state rat
 
 | | |
 |---|---|
-| **Trace 1 · Minimal win (15 states)** — the shortest game Alloy could find: both players place exactly one card, the top bid is 1, no Skull is ever flipped, and PlayerA wins 2–0. | **Trace 2 · Skull lost, still wins (40 states)** — a counterexample trace where a player loses their Skull early on but still comes back to win two rounds. |
+| **Trace 1 · Minimal win (15 states)** — the shortest game Alloy could find: both players place exactly one card, the top bid is 1, no Skull is ever flipped, and PlayerA wins 2–0. | **Trace 2 · Skull lost, still wins (35 states)** — a counterexample trace where a player loses their Skull early on but still comes back to win two rounds. |
 | [![Trace 1 preview](assets/trace1.png)] | [![Trace 2 preview](assets/trace2.png)] |
 | *(click to open full resolution)* | *(click to open full resolution)* |
 
