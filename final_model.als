@@ -393,7 +393,7 @@ pred Game {
             (s.phase = Flipping => Flip[s, sNext] or LoseCardA[s, sNext] or LoseCardB[s, sNext] or WinA[s, sNext] or WinB[s, sNext]))
 }
 
-// run Game for 40
+run Game for 40
 
 
 // Checks that a full game (a player reaching 2 points) can occur within 15 states
@@ -402,7 +402,7 @@ pred FifteenStateSolutionsExist {
     IsGameOver[first.next.next.next.next.next.next.next.next.next.next.next.next.next.nexts]
 }
 
-// run FifteenStateSolutionsExist for 15
+run FifteenStateSolutionsExist for 15
 
 
 // Asserts that no game can end (reach IsGameOver) before the 14th state
@@ -415,7 +415,7 @@ assert NoSolutionsLessThanFifteenStates {
         s in first.next.next.next.next.next.next.next.next.next.next.next.next.next.nexts
 }
 
-// check NoSolutionsLessThanFifteenStates for 15
+check NoSolutionsLessThanFifteenStates for 15
 
 
 // Losing one's Skull does not, by itself, force a loss. Checked at scope 40 and again at
