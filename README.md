@@ -11,7 +11,7 @@ The two counterexample-style traces below are easiest to read state-by-state rat
 | | |
 |---|---|
 | **Trace 1 · Minimal win (15 states)** — the shortest game Alloy could find: both players place exactly one card, the top bid is 1, no Skull is ever flipped, and PlayerA wins 2–0. | **Trace 2 · Skull lost, still wins (40 states)** — a counterexample trace where a player loses their Skull early on but still comes back to win two rounds. |
-| [![Trace 1 preview](assets/trace1-preview.png)](assets/trace1-strip.png) | [![Trace 2 preview](assets/trace2-preview.png)](assets/trace2-strip.png) |
+| [![Trace 1 preview](assets/trace1.png)] | [![Trace 2 preview](assets/trace2.png)] |
 | *(click to open full resolution)* | *(click to open full resolution)* |
 
 ## System overview
@@ -52,7 +52,8 @@ Skull is a bluffing card game. This model considers a two-player version with `P
    - `run Game for 40` — any valid game.
    - `run FifteenStateSolutionsExist for 15` — the minimal 15-state trace.
    - `check NoSolutionsLessThanFifteenStates for 15` — no game finishes in fewer than 15 states.
-   - `check LosingSkullMeansNoWin for 40` / `check LosingSkullMeansNoWinMinimal for 15` — losing your `Skull` doesn't guarantee a loss (checked at two scopes).
+   - `check LosingSkullMeansNoWin for 40` — Alloy finds a counterexample here (see Trace 2 above): a player can lose their Skull and still win, refuting the assertion at this scope.
+   - `check LosingSkullMeansNoWinMinimal for 15` — no counterexample at this smaller scope. Minimal-length traces never involve losing a card at all, so the assertion only holds vacuously here.
 
 ## Analysis highlights
 
@@ -66,12 +67,9 @@ Skull is a bluffing card game. This model considers a two-player version with `P
 .
 ├── README.md
 ├── final.als              # the Alloy model
-├── report.pdf              # full write-up (model explanation + analysis + retrospective)
-├── docs/
-│   └── index.html          # interactive swipeable trace viewer (GitHub Pages)
+├── report.pdf             # full write-up (model explanation + analysis + retrospective)
+├── index.html             # interactive swipeable trace viewer (GitHub Pages)
 └── assets/
-    ├── trace1-strip.png    # full-res 15-state trace
-    ├── trace1-preview.png  # scaled-down preview used in this README
-    ├── trace2-strip.png    # full-res 40-state trace
-    └── trace2-preview.png  # scaled-down preview used in this README
+    ├── trace1.png    # full-res 15-state trace
+    ├── trace2.png    # full-res 40-state trace
 ```
