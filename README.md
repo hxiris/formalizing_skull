@@ -66,10 +66,11 @@ Skull is a bluffing card game. This model considers a two-player version with `P
 ```
 .
 ├── README.md
-├── final.als              # the Alloy model
-├── report.pdf             # full write-up (model explanation + analysis + retrospective)
-├── index.html             # interactive swipeable trace viewer (GitHub Pages)
+├── final_model.als              # the Alloy model
+├── final.pdf                    # full write-up (model explanation + analysis + retrospective)
+├── docs/
+│   └── index.html         # interactive swipeable trace viewer (GitHub Pages)
 └── assets/
     ├── trace1.png    # full-res 15-state trace
-    ├── trace2.png    # full-res 40-state trace
+    ├── trace2.png    # full-res 35-state trace
 ```
