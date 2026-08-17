@@ -6,7 +6,7 @@ An [Alloy](https://alloytools.org/) model of the two-player bluffing card game *
 
 The two counterexample-style traces below are easiest to read state-by-state rather than as one long strip. Open the interactive viewer to swipe through them one `State` at a time:
 
-**👉 [Open the interactive trace viewer](https://hxchen666.github.io/formalizing_skull/)**
+**👉 [Open the interactive trace viewer](https://hxiris.github.io/formalizing_skull/)**
 
 | | |
 |---|---|
